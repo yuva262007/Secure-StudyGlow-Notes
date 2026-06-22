@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Narayani's Secure StudyGlow Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen">
+
+        <div class="welcome-card">
+            <div class="logo">📒✨</div>
+
+            <h1>Narayani's StudyGlow Notes</h1>
+
+            <p>
+                Organize your thoughts, studies, and inspirations.
+            </p>
+
+            <button onclick="openAuth()">
+                🚀 Enter App
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Authentication Screen -->
+    <div id="authScreen" style="display:none;">
+
+        <h2>🔐 Narayani's Secure StudyGlow Notes</h2>
+
+        <div id="createPasswordSection">
+
+            <h3>Create Password</h3>
+
+            <input type="password"
+                   id="newPassword"
+                   placeholder="Create Password">
+
+            <input type="password"
+                   id="confirmPassword"
+                   placeholder="Confirm Password">
+
+            <button onclick="createPassword()">
+                Create Password
+            </button>
+
+        </div>
+
+        <div id="loginSection" style="display:none;">
+
+            <h3>Login</h3>
+
+            <input type="password"
+                   id="loginPassword"
+                   placeholder="Enter Password">
+
+            <button onclick="login()">
+                Login
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Notes App -->
+    <div id="appContent" style="display:none;">
+
+        <h1>✨ Narayani's StudyGlow Notes</h1>
+
+        <button onclick="toggleDarkMode()">
+            🌙 Dark Mode
+        </button>
+
+        <div class="container">
+
+            <input type="text"
+                   id="title"
+                   placeholder="Note Title">
+
+            <textarea id="content"
+                      placeholder="Write your thoughts..."></textarea>
+
+            <button onclick="addNote()">
+                Add Note
+            </button>
+
+            <input type="text"
+                   id="search"
+                   placeholder="Search notes..."
+                   onkeyup="searchNotes()">
+
+            <div id="notes"></div>
+
+        </div>
+
+        <footer>
+            Made with ❤️ by Narayani
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
